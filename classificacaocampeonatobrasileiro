@@ -1,0 +1,41 @@
+ bool entradavalida = false;
+ int time;
+
+ do
+ {
+     Console.Write("digite a posicao que o time esta ");
+     string entrada = Console.ReadLine();
+
+
+
+     if (int.TryParse(entrada, out time) && time >= 0)
+     {
+
+         entradavalida = true;
+
+     }
+     else
+     {
+         Console.WriteLine("por favor , insira uma idade valida ( um numero inteiro maior ou igual a zero)");
+     }
+
+
+
+ }
+ while (!entradavalida);
+
+
+
+
+ if (time <= 4)
+     Console.WriteLine("seu time esta classificado para: libertadores");
+ else if (time >= 5 && time <= 6)
+     Console.WriteLine("seu time esta classificado para: pre - libertadores");
+ else if (time >= 7 && time <= 12)
+     Console.WriteLine("seu time esta classificado para: copa-sul americana");
+ else
+     Console.WriteLine("seu time esta rebaixado para serie b");
+
+      Console.ReadLine();
+
+     
